@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-size : 100%;
+}
+.menu {
+    display: flex;
+}
+.menu-item {
+    color: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+.menu-item:hover {
+    color: darkgray;
+}
+
+.header {
+    background-color: black;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    color: #fff;
+}
+
+.header .inner {
+    height: 56px;
+    margin: auto; /* 수평 정렬 */
+    width: 85%;
+    position: relative;
+    display: flex;
+}
+
+.header .inner .inner-left {
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 100%;
+}
+.header .inner .inner-left .logo img{
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+.header .inner .inner-left .menu {
+    list-style: none;
+}
+.header .inner .inner-right {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 400px;
+    height: 100%;
+}
+.header .inner .inner-right div{
+    margin-right: 15px;
+    align-items: center; 
+}
+.header .inner .inner-right div:last-child{
+    margin-right: 0;
+}
+.header .inner .inner-right .search input{
+    left: 0;
+    height: 38px;
+    width: 240px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+}
+.header .inner .inner-right .menu .menu-item:last-child {
+    width: 75px;
+    height: 32px;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    text-align: center;
+    padding: 3px;
+    box-sizing: border-box;
+}
+.header .inner .inner-right .menu .menu-item:last-child:hover {
+    border-color: darkgray;
+}
+
