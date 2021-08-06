@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    /* background-color: black; */
     background-size : 100%;
 }
 .menu {
@@ -27,7 +26,6 @@ body {
 }
 
 .header .inner {
-    /* background-color: orange; */
     height: 56px;
     margin: auto; /* 수평 정렬 */
     width: 85%;
@@ -41,19 +39,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 550px;
+    width: 600px;
     height: 100%;
-}
-.header .inner .inner-left .logo {
-    float: left;
-    margin-right: 20px;
-   
 }
 .header .inner .inner-left .logo img{
     width: 32px;
     height: 32px;
     display: block;
-    background-color: black;
+}
+.header .inner .inner-left .menu {
+    list-style: none;
 }
 .header .inner .inner-right {
     position: absolute;
