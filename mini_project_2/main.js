@@ -29,11 +29,11 @@ alert(msg);
 // 아래에 getItemByAmount 함수를 작성하세요.
 function getItemByAmount(data, amount) {
     let item_Buy =null;
-    let left_Money = amount;
+    let minimum_left_Money = amount;
     
     data.forEach(function (item) {
-    	if(amount-item.price >=0 && amount-item.price < left_Money){
-        	left_Money = amount-item.price;
+    	if(amount-item.price >=0 && amount-item.price < minimum_left_Money){
+        	minimum_left_Money = amount-item.price;
             item_Buy = item;
         }
     });
