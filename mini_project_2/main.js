@@ -28,14 +28,15 @@ alert(msg);
 
 // 아래에 getItemByAmount 함수를 작성하세요.
 function getItemByAmount(data, amount) {
-    let item =null;
+    let item_Buy =null;
     let left_Money = amount;
-    for(let i=0;i<data.length;i++){                                                           
-        // 주어진 금액보다 낮은 가격의 물품과의 가격 차이를 min 값과 비교해 주어진 금액에 제일 근접한 상품 찾기
-        if(amount-data[i].price >= 0 && amount-data[i].price < left_Money){ 
-            left_Money = amount-data[i].price;
-            item = data[i];
+    
+    data.forEach(function (item) {
+    	if(amount-item.price >=0 && amount-item.price < left_Money){
+        	left_Money = amount-item.price;
+            item_Buy = item;
         }
-    }
-    return item;
+    });
+    
+    return item_Buy;
 }
