@@ -14,7 +14,7 @@ const data = [
 
 // 사용자 입력 받기
 const line = prompt('최대 금액을 입력해주세요.');
-const amount = +line;
+const amount = parseInt(line);
 
 // 주어진 금액으로 살 수 있는 가장 비싼 상품을 구함
 const item = getItemByAmount(data, amount);
@@ -29,11 +29,11 @@ alert(msg);
 // 아래에 getItemByAmount 함수를 작성하세요.
 function getItemByAmount(data, amount) {
     let item =null;
-    let min = Infinity;
+    let left_Money = amount;
     for(let i=0;i<data.length;i++){                                                           
         // 주어진 금액보다 낮은 가격의 물품과의 가격 차이를 min 값과 비교해 주어진 금액에 제일 근접한 상품 찾기
-        if(amount-data[i].price >= 0 && amount-data[i].price < min){ 
-            min = amount-data[i].price;
+        if(amount-data[i].price >= 0 && amount-data[i].price < left_Money){ 
+            left_Money = amount-data[i].price;
             item = data[i];
         }
     }
